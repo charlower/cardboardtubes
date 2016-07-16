@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/kc.fab.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+
+    <title>Nangs | Make Order | Buy Nangs, n2o Bulbs and Nang Accessories.</title>
+</head>
+<body>
+
+
+    <div class="navbar navbar-inverse navbar-static-top navbar-no-margin">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand"><img src="Content/img/nangs-log.png" alt="Nangs Logo" /></a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="#">Make Order</a></li>
+                    <li><a href="#shoppingCart" data-toggle="modal">Shopping Cart</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact" data-toggle="modal">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1>Make Your Order</h1>
+            <p>Follow the steps bellow to complete your order. </p>
+            <p style="margin-bottom:30px !important;">Please note that instant drop off is only available within the highlighted areas.</p>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <h1><i class='fa fa-plane'></i> Select Delivery Method</h1>
+        <div class="btn-group btn-group-justified" role="group" aria-label="Australia Post or Instant Melbourne Drop Off">
+            <div class="btn-group" role="group">
+                <button type="button" id="hide" style="border-right: none" class="btn btn-default btn-lg btn-default-radio"><i class='fa fa-envelope'></i> Post </button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" id="show" style="border-left: none" class="btn btn-success btn-lg btn-success-radio"><i class='fa fa-truck'></i> Drop Off </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container post-container-height text-center" id="post" style="display: none;">
+        <div id="locationField">
+            <input id="autocomplete" placeholder="Enter delivery address" onFocus="geolocate()" type="text">
+            <p>We use Australia Post next day service for all deliveries.</p>
+        </div>
+    </div>
+
+    <div class="container container-margin-bottom text-center" id="map" style="display:none;">
+        <input id="pac-input" class="controls" type="text" placeholder="Enter drop off address">
+        <p>Please note instant drop off is only available within the highlighted areas. We are sorry for any inconvenience.</p>
+        <div class="Flexible-container">
+            <div id="maps"></div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <h1><i class='fa fa-asterisk'></i> Enter Your Details</h1>
+
+    </div>
+
+    <div class="container">
+        <h2 class="text-center">3. Add products &amp; checkout!</h2>
+        <div class="row">
+            <div class="col-sm-4 ct-product">
+                <h3 class="ct-product-title">ISI Chargers - 10 Pack</h3>
+                <h4 class="ct-product-price">$50.00</h4>
+                <p>Some text to describe this thing. Maybe it is a promotion? Maybe it is about delivery?</p>
+                <a href="#"><img src="content/img/nang.jpg" alt="Nang Image" class="img-responsive center-block ct-product-image" /></a>
+                <a href="#" class="btn btn-success btn-block ct-product-button">Add to Cart</a>
+                <a href="#" class="btn btn-default btn-block">More Info</a>
+            </div>
+            <div class="col-sm-4 ct-product">
+                <h3 class="ct-product-title">ISI Chargers - 20 Pack</h3>
+                <h4 class="ct-product-price">$100.00</h4>
+                <p>Some text to describe this thing. Maybe it is a promotion? Maybe it is about delivery?</p>
+                <a href="#"><img src="content/img/nang.jpg" alt="Nang Image" class="img-responsive center-block ct-product-image" /></a>
+                <a href="#" class="btn btn-success btn-block ct-product-button">Add to Cart</a>
+                <a href="#" class="btn btn-default btn-block">More Info</a>
+            </div>
+            <div class="col-sm-4 ct-product">
+                <h3 class="ct-product-title">ISI Chargers - 50 Pack</h3>
+                <h4 class="ct-product-price">$100.00</h4>
+                <p>Some text to describe this thing. Maybe it is a promotion? Maybe it is about delivery?</p>
+                <a href="#"><img src="content/img/nang.jpg" alt="Nang Image" class="img-responsive center-block ct-product-image" /></a>
+                <a href="#" class="btn btn-success btn-block ct-product-button">Add to Cart</a>
+                <a href="#" class="btn btn-default btn-block">More Info</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container index-product-margin">
+        <div class="row">
+            <div class="col-sm-4 ct-product">
+                <h3 class="ct-product-title">ISI Chargers - 100 Pack</h3>
+                <h4 class="ct-product-price">$50.00</h4>
+                <p>Some text to describe this thing. Maybe it is a promotion? Maybe it is about delivery?</p>
+                <a href="#"><img src="content/img/nang.jpg" alt="Nang Image" class="img-responsive center-block ct-product-image" /></a>
+                <a href="#" class="btn btn-success btn-block ct-product-button">Add to Cart</a>
+                <a href="#" class="btn btn-default btn-block">More Info</a>
+            </div>
+            <div class="col-sm-4 ct-product">
+                <h3 class="ct-product-title">ISI Chargers - 150 Pack</h3>
+                <h4 class="ct-product-price">$100.00</h4>
+                <p>Some text to describe this thing. Maybe it is a promotion? Maybe it is about delivery?</p>
+                <a href="#"><img src="content/img/nang.jpg" alt="Nang Image" class="img-responsive center-block ct-product-image" /></a>
+                <a href="#" class="btn btn-success btn-block ct-product-button">Add to Cart</a>
+                <a href="#" class="btn btn-default btn-block">More Info</a>
+            </div>
+            <div class="col-sm-4 ct-product">
+                <h3 class="ct-product-title">ISI Chargers - 200 Pack</h3>
+                <h4 class="ct-product-price">$100.00</h4>
+                <p>Some text to describe this thing. Maybe it is a promotion? Maybe it is about delivery?</p>
+                <a href="#"><img src="content/img/nang.jpg" alt="Nang Image" class="img-responsive center-block ct-product-image" /></a>
+                <a href="#" class="btn btn-success btn-block ct-product-button">Add to Cart</a>
+                <a href="#" class="btn btn-default btn-block">More Info</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="navbar-text pull-left">&copy;2016 Nangs.net.au</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="#shoppingCart" data-toggle="modal">
+            <div class="kc_fab_wrapper">
+            </div>
+        </a>
+    </div>
+
+    <div class="modal fade" id="contact" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Contact Nangs.net.au</h4>
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true" style="font-size:18px;"></span> <h3 style="display:inline;">1300 123 456</h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputName">Name</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Your name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="You@example.com" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage">Message</label>
+                            <textarea class="form-control" id="inputMessage" placeholder="What can we help you with?" rows="6"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default pull-left" data-dismiss="modal">Close</a>
+                    <button class="btn btn-success pull-left" type="submit">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="shoppingCart">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Shopping Cart</h4>
+                </div>
+                <div class="modal-body">
+                    <main>
+                        <div class="widget">
+                            <div class="ct-cart">
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default pull-left" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/shop.js"></script>
+    <script src="Scripts/kc.fab.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd8Udf6OOf8jANrm7odW4LKIRQee94N0c&libraries=places&callback=initAutocomplete" async defer></script>
+    
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('maps'), {
+                center: { lat: -37.855339, lng: 145.055923 },
+                zoom: 10,
+                clickableIcons: false,
+                fullscreenControl: false,
+                streetViewControl: false,
+                disableDefaultUI: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var input = /** @type {!HTMLInputElement} */(
+            document.getElementById('pac-input'));
+
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.bindTo('bounds', map);
+
+            var infowindow = new google.maps.InfoWindow();
+            var marker = new google.maps.Marker({
+                map: map,
+                anchorPoint: new google.maps.Point(0, -29)
+            });
+
+            autocomplete.addListener('place_changed', function () {
+                infowindow.close();
+                marker.setVisible(false);
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    window.alert("Autocomplete's returned place contains no geometry");
+                    return;
+                }
+
+
+                if (place.geometry.viewport) {
+                    map.fitBounds(place.geometry.viewport);
+                    map.setZoom(12);
+                } else {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(10);
+                }
+
+                marker.setIcon(/** @type {google.maps.Icon} */({
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(35, 35)
+                }));
+                marker.setPosition(place.geometry.location);
+                marker.setVisible(true);
+
+                var address = '';
+                if (place.address_components) {
+                    address = [
+                      (place.address_components[0] && place.address_components[0].short_name || ''),
+                      (place.address_components[1] && place.address_components[1].short_name || ''),
+                      (place.address_components[2] && place.address_components[2].short_name || '')
+                    ].join(' ');
+                }
+
+                infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+                infowindow.open(map, marker);
+            });
+
+
+            var deliveryCoords = [
+                { lat: -37.840157, lng: 144.911385 },
+                { lat: -37.828497, lng: 144.901428 },
+                { lat: -37.816836, lng: 144.934731 },
+                { lat: -37.738141, lng: 144.933014 },
+                { lat: -37.7452, lng: 144.996872 },
+                { lat: -37.76013, lng: 145.068283 },
+                { lat: -37.830124, lng: 145.05661 },
+                { lat: -37.835412, lng: 145.097809 },
+                { lat: -37.892331, lng: 145.089226 },
+                { lat: -37.899104, lng: 145.143127 },
+                { lat: -37.959493, lng: 145.131798 },
+                { lat: -37.957869, lng: 145.113945 },
+                { lat: -37.986422, lng: 145.109997 },
+                { lat: -37.982092, lng: 145.07206 },
+                { lat: -37.975733, lng: 145.01627 },
+                { lat: -37.926055, lng: 144.986401 },
+                { lat: -37.863199, lng: 144.971123 },
+                { lat: -37.840021, lng: 144.916363 },
+            ];
+
+            var coordsObject = new google.maps.Polygon({
+                paths: deliveryCoords,
+                strokeColor: '#000000',
+                strokeOpacity: 0.8,
+                strokeWeight: 0,
+                fillColor: '#79CE00',
+                fillOpacity: 0.5
+            });
+
+            map.set('styles', [
+              {
+                  featureType: 'road',
+                  elementType: 'geometry',
+                  stylers: [
+                    { color: '#aaaaaa' },
+                    { weight: 0.5 }
+                  ]
+              }, {
+                  featureType: 'road',
+                  elementType: 'labels.icon',
+                  stylers: [
+                    { visibility: 'off' }
+                  ]
+              }, {
+                  featureType: 'road.local',
+                  elementType: 'geometry',
+                  stylers: [
+                    { color: '#cccccc' }
+                  ]
+              }, {
+                  featureType: "road.arterial",
+                  elementType: "geometry",
+                  stylers: [
+                    { hue: "#79CE00" },
+                    { saturation: 70 }
+                  ]
+              }, {
+                  featureType: "landscape",
+                  elementType: "geometry",
+                  stylers: [
+                    { color: "#eeeeee" }
+                  ]
+              }, {
+                  featureType: "water",
+                  elementType: "geometry",
+                  stylers: [
+                    { color: "#aaaaaa" }
+                  ]
+              }, {
+                  featureType: 'poi',
+                  elementType: 'geometry',
+                  stylers: [
+                    { visibility: 'off' }
+                  ]
+              },
+            ]);
+            coordsObject.setMap(map);
+        }
+    </script>
+    <script>
+        $('body').ctshop({
+            paypal: {
+                business: "charlows@gmail.com",
+                currency_code: "AUD",
+                cpp_payflow_color: "#5cb85c",
+                return: "http://www.google.com",
+                cancel_return: "http://www.digg.com"
+            }
+        });
+
+        $('body').ctshop({
+            main: {
+                currency_after_number: true,
+                permanent_cart_buttons: true,
+                permanent_total_value: true,
+                product_image: "ct-product-image"
+            }
+        });
+    </script>
+    <script>
+        var links = [
+                {
+                    "bgcolor": "#579005",
+                    "icon": "<i class='fa fa-shopping-basket'></i>",
+                }
+        ]
+        $('.kc_fab_wrapper').kc_fab(links);
+    </script>
+    <script>
+        var placeSearch, autocomplete;
+        var componentForm = {
+            street_number: 'short_name',
+            route: 'long_name',
+            locality: 'long_name',
+            administrative_area_level_1: 'short_name',
+            country: 'long_name',
+            postal_code: 'short_name'
+        };
+
+        function initAutocomplete() {
+            // Create the autocomplete object, restricting the search to geographical
+            // location types.
+            autocomplete = new google.maps.places.Autocomplete(
+                /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+                { types: ['geocode'] });
+
+            // When the user selects an address from the dropdown, populate the address
+            // fields in the form.
+            autocomplete.addListener('place_changed', fillInAddress);
+        }
+
+        function fillInAddress() {
+            // Get the place details from the autocomplete object.
+            var place = autocomplete.getPlace();
+
+            for (var component in componentForm) {
+                document.getElementById(component).value = '';
+                document.getElementById(component).disabled = false;
+            }
+
+            // Get each component of the address from the place details
+            // and fill the corresponding field on the form.
+            for (var i = 0; i < place.address_components.length; i++) {
+                var addressType = place.address_components[i].types[0];
+                if (componentForm[addressType]) {
+                    var val = place.address_components[i][componentForm[addressType]];
+                    document.getElementById(addressType).value = val;
+                }
+            }
+        }
+
+        // Bias the autocomplete object to the user's geographical location,
+        // as supplied by the browser's 'navigator.geolocation' object.
+        function geolocate() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var geolocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var circle = new google.maps.Circle({
+                        center: geolocation,
+                        radius: position.coords.accuracy
+                    });
+                    autocomplete.setBounds(circle.getBounds());
+                });
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("#hide").addClass("active");
+                $('#show').removeClass("active");
+                $("#map").slideUp(500);
+                $("#post").slideDown(500);
+            });
+            $("#show").click(function () {
+                $("#show").addClass("active");
+                $('#hide').removeClass("active");
+                $('#post').slideUp(500);
+                $("#map").slideDown(500);
+            });
+            $(document).ready(function () {
+                $('#show').on('click', initMap);
+                $('#hide').on('click', initAutocomplete);
+            });
+        });
+    </script>
+
+
+</body>
+
+
+
+</html>
